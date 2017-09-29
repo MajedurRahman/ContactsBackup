@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorAsphalt">#2c3e50</color>
+    <color name="colorAsphaltLight">#34495E</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorCloudWhite">#ecf0f1</color>
+    <color name="colorSelect">#F2F1EF</color>
+    <color name="pink">#FFFA6175</color>
+    <color name="pinkText">#FFFA676F</color>
+    <color name="pinkOrange">#FFFB7A5E</color>
+    <color name="colorOrange">#F9690E</color>
+    <color name="colorOrangeLight">#FFFF8132</color>
+    <color name="colorRadicalRed">#ff2246</color>
+    <color name="colorRadicalRedLight">#F64747</color>
+    <color name="colorUnSelect">#E9D460</color>
+    <color name="colorNav">#FFFD1239</color>
+</resources>
