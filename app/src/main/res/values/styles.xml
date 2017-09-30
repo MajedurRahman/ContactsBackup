@@ -11,7 +11,7 @@
 
     <style name="RedTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorRadicalRed</item>
+        <item name="colorPrimary">@color/sweetPink</item>
         <item name="colorPrimaryDark">@color/colorRadicalRedLight</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
@@ -22,6 +22,19 @@
         <item name="colorPrimary">@color/colorOrange</item>
         <item name="colorPrimaryDark">@color/colorOrangeLight</item>
         <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/onGreen</item>
+
+        <!-- inactive thumb color -->
+        <item name="colorSwitchThumbNormal">#f1f1f1
+        </item>
+
+        <!-- inactive track color (30% transparency) -->
+        <item name="android:colorForeground">#42221f1f
+        </item>
     </style>
 
 </resources>

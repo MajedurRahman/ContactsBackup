@@ -2,7 +2,7 @@
 <resources>
     <color name="colorAsphalt">#2c3e50</color>
     <color name="colorAsphaltLight">#34495E</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#FFFA676F</color>
     <color name="colorCloudWhite">#ecf0f1</color>
     <color name="colorSelect">#F2F1EF</color>
     <color name="pink">#FFFA6175</color>
@@ -14,4 +14,6 @@
     <color name="colorRadicalRedLight">#F64747</color>
     <color name="colorUnSelect">#E9D460</color>
     <color name="colorNav">#FFFD1239</color>
+<color name="sweetPink">#FFFA4A54</color>
+    <color name="onGreen">#00e661</color>
 </resources>
