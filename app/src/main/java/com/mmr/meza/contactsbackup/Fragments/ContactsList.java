@@ -10,14 +10,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.github.tamir7.contacts.Contact;
 import com.github.tamir7.contacts.Contacts;
 import com.github.tamir7.contacts.Query;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
-import com.mmr.meza.contactsbackup.Activity.MainActivity;
 import com.mmr.meza.contactsbackup.Adapter.RecyclerViewCustomAdapter;
 import com.mmr.meza.contactsbackup.R;
 
@@ -25,11 +23,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class ContactsList extends Fragment {
 
+
+    private static  List<Contact> contactsList;
 
     public ContactsList() {
         // Required empty public constructor
@@ -43,11 +40,11 @@ public class ContactsList extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_contacts_list, container, false);
 
-        checkePermission(view);
+        checkPermission(view);
         return view;
     }
 
-    private void checkePermission(final View view){
+    private void checkPermission(final View view){
 
         PermissionListener permissionlistener = new PermissionListener() {
             @Override
@@ -87,13 +84,18 @@ public class ContactsList extends Fragment {
 
     }
 
-    private List<Contact> getAllContactsFromPhone() {
+    public List<Contact> getAllContactsFromPhone() {
 
-        List<Contact> contactsList;
         Query q = Contacts.getQuery();
         q.hasPhoneNumber();
         contactsList = q.find();
         return contactsList;
     }
+
+
+
+
+
+
 
 }
