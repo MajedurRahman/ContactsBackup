@@ -9,10 +9,12 @@
     app:cardUseCompatPadding="true">
 
     <RelativeLayout
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/itemRelativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="80dp">
+        android:layout_height="80dp"
+        android:clickable="true"
+
+        android:foreground="?android:attr/selectableItemBackground">
 
         <ImageView
             android:id="@+id/contactImage"
@@ -23,12 +25,12 @@
 
         <TextView
             android:id="@+id/contactName"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignTop="@+id/contactImage"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_toRightOf="@+id/contactImage"
             android:gravity="center"
             android:text="Md Majedur Rahman"
@@ -37,16 +39,35 @@
 
         <TextView
             android:id="@+id/contactNumber"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/contactName"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="20dp"
             android:layout_toRightOf="@+id/contactImage"
             android:gravity="center"
             android:text="+8801775676776"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textColor="@color/pinkOrange" />
+            android:textColor="@color/pinkText" />
+
+        <Button
+            android:id="@+id/call_button_item"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/call_button_margin"
+            android:layout_marginRight="@dimen/call_button_margin"
+            android:background="@drawable/circle_button_pressed"
+            android:drawableLeft="@drawable/ic_call_black_24dp"
+            android:drawableTint="@drawable/button_color_call"
+            android:elevation="24dp"
+            android:shadowColor="@color/colorAsphalt"
+            android:shadowRadius="40"
+
+
+            />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

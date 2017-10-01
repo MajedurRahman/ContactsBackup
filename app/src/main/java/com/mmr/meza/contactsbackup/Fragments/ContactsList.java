@@ -40,6 +40,8 @@ public class ContactsList extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_contacts_list, container, false);
 
+
+
         checkPermission(view);
         return view;
     }
@@ -71,6 +73,9 @@ public class ContactsList extends Fragment {
                 .check();
 
     }
+
+
+
 
     private void initRecyclerView(View view) {
 

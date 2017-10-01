@@ -13,6 +13,11 @@ import com.mmr.meza.contactsbackup.Fragments.Backups;
 import com.mmr.meza.contactsbackup.Fragments.ContactsList;
 import com.mmr.meza.contactsbackup.R;
 
+import java.io.File;
+
+import ezvcard.VCard;
+import ezvcard.io.text.VCardReader;
+
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;

@@ -5,7 +5,7 @@ android {
     buildToolsVersion "26.0.1"
     defaultConfig {
         applicationId "com.mmr.meza.contactsbackup"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -33,4 +33,7 @@ dependencies {
     compile 'gun0912.ted:tedpermission:2.0.3'
     testCompile 'junit:junit:4.12'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.droidninja:filepicker:2.0.8'
+    compile 'com.googlecode.ez-vcard:ez-vcard:0.10.3'
+
 }

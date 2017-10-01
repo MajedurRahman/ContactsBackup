@@ -25,6 +25,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
+import ezvcard.VCard;
+import ezvcard.io.text.VCardReader;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -77,6 +80,32 @@ public class Backups extends Fragment {
             }
         });
 
+
+        parentView.findViewById(R.id.restoreFromLocalButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View localView) {
+
+                /**
+                 * write data to file
+                 * with Display name and phone number
+                 *//**
+                 * write data to file
+                 * with Display name and phone number
+                 *//**
+                 * write data to file
+                 * with Display name and phone number
+                 *//**
+                 * write data to file
+                 * with Display name and phone number
+                 */
+
+
+            }
+
+
+        });
+
+
     }
 
 
@@ -97,7 +126,12 @@ public class Backups extends Fragment {
 
         @Override
         protected void onPreExecute() {
-            super.onPreExecute();
+
+            initializeData();
+        }
+
+        private void initializeData() {
+            //  super.onPreExecute();
             try {
                 // File vcfFile = new File(this.getExternalFilesDir(null), "generated.vcf");
                 vdfdirectory = new File(
@@ -111,7 +145,6 @@ public class Backups extends Fragment {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-
 
         }
 
