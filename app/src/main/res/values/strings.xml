@@ -3,4 +3,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_subject">Contacts Backup Mail</string>
+    <string name="mail_text">Hi this is your Contacts Backup File email, The file is attached below. If you want to restore your contacts then just download "ContactsBackup.vcf" and open "ContactsBackup.vcf" file with contacts app. Thanks for using Contacts Backup</string>
+    <string name="denied_message"><![CDATA[If you reject permission,you can not use this service  Please turn on permissions at [Setting] > [Permission]]]></string>
 </resources>

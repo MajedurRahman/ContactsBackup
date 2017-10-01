@@ -26,7 +26,7 @@ import java.util.List;
 public class ContactsList extends Fragment {
 
 
-    private static  List<Contact> contactsList;
+    public static  List<Contact> contactsList;
 
     public ContactsList() {
         // Required empty public constructor
@@ -65,7 +65,7 @@ public class ContactsList extends Fragment {
                 .setPermissionListener(permissionlistener)
                 .setDeniedTitle("Permission denied")
                 .setDeniedMessage(
-                        "If you reject permission,you can not use this service\n\nPlease turn on permissions at [Setting] > [Permission]")
+                        R.string.denied_message)
                 .setGotoSettingButtonText("Go to Settings")
                 .setPermissions(Manifest.permission.READ_CONTACTS,Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 .check();
