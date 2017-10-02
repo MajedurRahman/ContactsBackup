@@ -13,11 +13,6 @@ import com.mmr.meza.contactsbackup.Fragments.Backups;
 import com.mmr.meza.contactsbackup.Fragments.ContactsList;
 import com.mmr.meza.contactsbackup.R;
 
-import java.io.File;
-
-import ezvcard.VCard;
-import ezvcard.io.text.VCardReader;
-
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
@@ -28,13 +23,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         initComponent();
-
     }
 
     private void initActionListener() {
-
 
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -59,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
             }
 
             @Override
@@ -70,18 +61,15 @@ public class MainActivity extends AppCompatActivity {
                 } else {
                     bottomNavigationView.getMenu().getItem(0).setChecked(false);
                 }
-
                 bottomNavigationView.getMenu().getItem(position).setChecked(true);
                 menuItem = bottomNavigationView.getMenu().getItem(position);
             }
 
             @Override
-
             public void onPageScrollStateChanged(int state) {
 
             }
         });
-
 
         setUpPager(viewPager);
     }
@@ -98,12 +86,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void initComponent() {
-
-
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_nav);
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         initActionListener();
-
 
     }
 

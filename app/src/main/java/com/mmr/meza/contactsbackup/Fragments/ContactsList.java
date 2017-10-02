@@ -26,7 +26,7 @@ import java.util.List;
 public class ContactsList extends Fragment {
 
 
-    public static  List<Contact> contactsList;
+    public static List<Contact> contactsList;
 
     public ContactsList() {
         // Required empty public constructor
@@ -41,12 +41,11 @@ public class ContactsList extends Fragment {
         View view = inflater.inflate(R.layout.fragment_contacts_list, container, false);
 
 
-
         checkPermission(view);
         return view;
     }
 
-    private void checkPermission(final View view){
+    private void checkPermission(final View view) {
 
         PermissionListener permissionlistener = new PermissionListener() {
             @Override
@@ -58,7 +57,7 @@ public class ContactsList extends Fragment {
             public void onPermissionDenied(ArrayList<String> deniedPermissions) {
                 // permission denied
                 RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
-                Snackbar snackbar = Snackbar.make(recyclerView , "Permission Denied " , Snackbar.LENGTH_LONG);
+                Snackbar snackbar = Snackbar.make(recyclerView, "Permission Denied ", Snackbar.LENGTH_LONG);
                 snackbar.show();
             }
         };
@@ -69,12 +68,15 @@ public class ContactsList extends Fragment {
                 .setDeniedMessage(
                         R.string.denied_message)
                 .setGotoSettingButtonText("Go to Settings")
-                .setPermissions(Manifest.permission.READ_CONTACTS,Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                .setPermissions(
+                        Manifest.permission.READ_CONTACTS,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.WRITE_CONTACTS,
+                        Manifest.permission.READ_EXTERNAL_STORAGE
+                )
                 .check();
 
     }
-
-
 
 
     private void initRecyclerView(View view) {
@@ -83,7 +85,7 @@ public class ContactsList extends Fragment {
         RecyclerView rv = view.findViewById(R.id.recyclerViewContactsList);
         LinearLayoutManager layout = new LinearLayoutManager(getActivity());
 
-        RecyclerViewCustomAdapter adapter = new RecyclerViewCustomAdapter(getActivity(),getAllContactsFromPhone());
+        RecyclerViewCustomAdapter adapter = new RecyclerViewCustomAdapter(getActivity(), getAllContactsFromPhone());
         rv.setAdapter(adapter);
         rv.setLayoutManager(layout);
 
@@ -96,11 +98,6 @@ public class ContactsList extends Fragment {
         contactsList = q.find();
         return contactsList;
     }
-
-
-
-
-
 
 
 }

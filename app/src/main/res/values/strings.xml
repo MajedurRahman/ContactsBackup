@@ -6,4 +6,7 @@
     <string name="email_subject">Contacts Backup Mail</string>
     <string name="mail_text">Hi this is your Contacts Backup File email, The file is attached below. If you want to restore your contacts then just download "ContactsBackup.vcf" and open "ContactsBackup.vcf" file with contacts app. Thanks for using Contacts Backup</string>
     <string name="denied_message"><![CDATA[If you reject permission,you can not use this service  Please turn on permissions at [Setting] > [Permission]]]></string>
+    <string name="contact_folder_name">/Contacts Backup/</string>
+    <string name="vcf_file_name">ContactsBackup.vcf</string>
+    <string name="promote_choose">Select Your Contacts Application</string>
 </resources>
