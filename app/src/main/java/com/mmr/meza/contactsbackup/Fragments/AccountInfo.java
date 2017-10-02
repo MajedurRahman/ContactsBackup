@@ -24,9 +24,6 @@ public class AccountInfo extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_account_info, container, false);
 
-
-
-
         return view;
     }
 

@@ -9,4 +9,6 @@
     <string name="contact_folder_name">/Contacts Backup/</string>
     <string name="vcf_file_name">ContactsBackup.vcf</string>
     <string name="promote_choose">Select Your Contacts Application</string>
+    <string name="denied_permission">Permission denied</string>
+    <string name="go_to_settings">Go to Settings</string>
 </resources>

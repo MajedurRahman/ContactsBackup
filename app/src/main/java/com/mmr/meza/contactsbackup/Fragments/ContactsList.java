@@ -57,17 +57,17 @@ public class ContactsList extends Fragment {
             public void onPermissionDenied(ArrayList<String> deniedPermissions) {
                 // permission denied
                 RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
-                Snackbar snackbar = Snackbar.make(recyclerView, "Permission Denied ", Snackbar.LENGTH_LONG);
+                Snackbar snackbar = Snackbar.make(recyclerView, R.string.denied_message, Snackbar.LENGTH_LONG);
                 snackbar.show();
             }
         };
 
         TedPermission.with(getActivity())
                 .setPermissionListener(permissionlistener)
-                .setDeniedTitle("Permission denied")
+                .setDeniedTitle(R.string.denied_permission)
                 .setDeniedMessage(
                         R.string.denied_message)
-                .setGotoSettingButtonText("Go to Settings")
+                .setGotoSettingButtonText(R.string.go_to_settings)
                 .setPermissions(
                         Manifest.permission.READ_CONTACTS,
                         Manifest.permission.WRITE_EXTERNAL_STORAGE,

@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scrollbars="none"
     tools:context="com.mmr.meza.contactsbackup.Fragments.AccountInfo">
 
     <LinearLayout
@@ -15,8 +16,8 @@
 
             <ImageView
                 android:id="@+id/imageViewAccountInfo"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_alignParentTop="true"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
@@ -34,40 +35,102 @@
                 android:text="Majedeur Rahman"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
                 android:textColor="@color/colorAsphalt" />
-            <!--
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/textView_Account_name"
-                            android:layout_marginLeft="30dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginBottom="10dp"
-                            android:id="@+id/currentContacts"
-                            android:text="Current Contacts :"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/textView_Account_name"
-                            android:layout_marginTop="10dp"
-                            android:layout_marginLeft="20dp"
-                            android:textColor="@color/pink"
-                            android:layout_toRightOf="@+id/currentContacts"
-                            android:text="2344"
-                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
-                 -->
+            <TextView
+                android:id="@+id/lastBackupField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_Account_name"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:text="Last Backups Date :"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/last_backup_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView_Account_name"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/lastBackupField"
+                android:text="25th May 2017"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/pink" />
+
+
+            <TextView
+                android:id="@+id/currentContacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/lastBackupField"
+                android:layout_alignRight="@id/lastBackupField"
+                android:layout_below="@id/lastBackupField"
+                android:layout_marginBottom="10dp"
+                android:singleLine="true"
+                android:text="Current Contacts :"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+
+            <TextView
+                android:id="@+id/currentContactsNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/last_backup_date"
+
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/currentContacts"
+                android:singleLine="true"
+                android:text="3452"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/pink" />
+
+
+            <TextView
+                android:id="@+id/contactsInCloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/lastBackupField"
+                android:layout_alignRight="@id/lastBackupField"
+                android:layout_below="@id/currentContacts"
+                android:layout_marginBottom="10dp"
+                android:singleLine="true"
+                android:text="Cloud Contacts :"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+
+            <TextView
+                android:id="@+id/contactsInCloudNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/currentContactsNumber"
+
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/contactsInCloud"
+                android:singleLine="true"
+                android:text="4452"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/pink" />
 
             <Switch
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/textView_Account_name"
+                android:layout_below="@id/contactsInCloud"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/background_switch"
                 android:text="Auto Backup"
                 android:textColor="@drawable/button_color_restore"
                 android:theme="@style/SCBSwitch" />
+
+
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>
