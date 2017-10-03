@@ -11,4 +11,6 @@
     <string name="promote_choose">Select Your Contacts Application</string>
     <string name="denied_permission">Permission denied</string>
     <string name="go_to_settings">Go to Settings</string>
+    <string name="last_backup_date">Last Backup Date :</string>
+    <string name="title_activity_phone_auth">PhoneAuthActivity</string>
 </resources>

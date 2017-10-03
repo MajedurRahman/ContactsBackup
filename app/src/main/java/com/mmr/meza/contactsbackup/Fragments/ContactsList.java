@@ -56,7 +56,7 @@ public class ContactsList extends Fragment {
             @Override
             public void onPermissionDenied(ArrayList<String> deniedPermissions) {
                 // permission denied
-                RecyclerView recyclerView = view.findViewById(R.id.recyclerView);
+                RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
                 Snackbar snackbar = Snackbar.make(recyclerView, R.string.denied_message, Snackbar.LENGTH_LONG);
                 snackbar.show();
             }
@@ -82,7 +82,7 @@ public class ContactsList extends Fragment {
     private void initRecyclerView(View view) {
 
 
-        RecyclerView rv = view.findViewById(R.id.recyclerViewContactsList);
+        RecyclerView rv = (RecyclerView) view.findViewById(R.id.recyclerViewContactsList);
         LinearLayoutManager layout = new LinearLayoutManager(getActivity());
 
         RecyclerViewCustomAdapter adapter = new RecyclerViewCustomAdapter(getActivity(), getAllContactsFromPhone());

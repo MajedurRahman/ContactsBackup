@@ -79,10 +79,10 @@ public class RecyclerViewCustomAdapter extends RecyclerView.Adapter<RecyclerView
         public AdapterViewHolder(View itemView, Context c) {
             super(itemView);
             context = c;
-            nameTextView = itemView.findViewById(R.id.contactName);
-            numberTextView = itemView.findViewById(R.id.contactNumber);
-            relativeLayout = itemView.findViewById(R.id.itemRelativeLayout);
-            callButton = itemView.findViewById(R.id.call_button_item);
+            nameTextView = (TextView) itemView.findViewById(R.id.contactName);
+            numberTextView = (TextView) itemView.findViewById(R.id.contactNumber);
+            relativeLayout = (RelativeLayout) itemView.findViewById(R.id.itemRelativeLayout);
+            callButton = (Button) itemView.findViewById(R.id.call_button_item);
 
 
         }

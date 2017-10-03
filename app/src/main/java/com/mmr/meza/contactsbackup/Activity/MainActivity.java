@@ -13,18 +13,24 @@ import com.mmr.meza.contactsbackup.Fragments.Backups;
 import com.mmr.meza.contactsbackup.Fragments.ContactsList;
 import com.mmr.meza.contactsbackup.R;
 
+
 public class MainActivity extends AppCompatActivity {
 
     private BottomNavigationView bottomNavigationView;
     private ViewPager viewPager;
     private MenuItem menuItem;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         initComponent();
+
     }
+
 
     private void initActionListener() {
 
@@ -83,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new AccountInfo());
         viewPager.setAdapter(adapter);
     }
-
 
     public void initComponent() {
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_nav);

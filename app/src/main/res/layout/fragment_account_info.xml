@@ -44,7 +44,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginTop="10dp"
-                android:text="Last Backups Date :"
+                android:text="@string/last_backup_date"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
             <TextView
@@ -80,7 +80,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/last_backup_date"
-
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/currentContacts"
@@ -88,7 +87,6 @@
                 android:text="3452"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
                 android:textColor="@color/pink" />
-
 
             <TextView
                 android:id="@+id/contactsInCloud"
@@ -102,13 +100,11 @@
                 android:text="Cloud Contacts :"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
-
             <TextView
                 android:id="@+id/contactsInCloudNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/currentContactsNumber"
-
                 android:layout_marginBottom="10dp"
                 android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/contactsInCloud"
@@ -129,8 +125,6 @@
                 android:text="Auto Backup"
                 android:textColor="@drawable/button_color_restore"
                 android:theme="@style/SCBSwitch" />
-
-
         </RelativeLayout>
     </LinearLayout>
 </ScrollView>
