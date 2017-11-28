@@ -81,10 +81,8 @@ public class ContactsList extends Fragment {
 
     private void initRecyclerView(View view) {
 
-
         RecyclerView rv = (RecyclerView) view.findViewById(R.id.recyclerViewContactsList);
         LinearLayoutManager layout = new LinearLayoutManager(getActivity());
-
         RecyclerViewCustomAdapter adapter = new RecyclerViewCustomAdapter(getActivity(), getAllContactsFromPhone());
         rv.setAdapter(adapter);
         rv.setLayoutManager(layout);
